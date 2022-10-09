@@ -11,8 +11,8 @@ namespace StringMatcherBenchmark
 {
     public class MyBenchmarks
     {
-        //private const string inputString = "1G1ZG57B&9";
-        private const string outputString = "1G1ZG57B229";
+        private const string inputString = "1G1ZG57B&9";
+        private const string outputString = "1G1ZG57B29";
 
         [Benchmark]
         public bool MatchReg()
@@ -24,6 +24,12 @@ namespace StringMatcherBenchmark
         public bool MatchFile()
         {
             return FileSystemName.MatchesSimpleExpression("1G1ZG57B?9", outputString);
+        }
+
+        [Benchmark]
+        public bool MatchOriginal()
+        {
+            return inputString[..8] == outputString[..8] && outputString[^1..] == inputString[^1..];
         }
     }
 }
