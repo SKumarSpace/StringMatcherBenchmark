@@ -8,7 +8,8 @@ AMD Ryzen Threadripper 3960X, 1 CPU, 48 logical and 24 physical cores
 
 .NET SDK=6.0.401
 
-|    Method |      Mean |    Error |   StdDev |
-|---------- |----------:|---------:|---------:|
-|  MatchReg | 103.24 ns | 0.355 ns | 0.315 ns |
-| MatchFile |  70.36 ns | 0.419 ns | 0.392 ns |
+|        Method |      Mean |    Error |   StdDev |
+|-------------- |----------:|---------:|---------:|
+|      MatchReg | 101.60 ns | 1.146 ns | 1.072 ns |
+|     MatchFile |  73.20 ns | 0.602 ns | 0.564 ns |
+| MatchOriginal |  35.05 ns | 0.721 ns | 0.675 ns |
